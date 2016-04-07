@@ -8,4 +8,5 @@ Live demo: http://sachinphatak.github.io/move-blob/
 1. Clone the repo.
 2. 'cd' into the folder you've cloned the repo into.
 3. Type 'npm install' on the command line.
-4. Open 'localhost:8000' on your browser and start moving the blob!
+4. Type 'npm start' on the command line.
+5. Open 'localhost:8000' on your browser and start moving the blob!
