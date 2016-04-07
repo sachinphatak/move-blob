@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Move-blob by sachinphatak</title>
 
+    <script type="text/javascript" src="js/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="js/lib/angular-hotkeys/build/hotkeys.js"></script>
+    <script type="text/javascript" src="js/move-blob.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="js/lib/angular-hotkeys/build/hotkeys.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width">
@@ -12,23 +17,34 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body ng-app="MoveBlobApp">
     <div class="wrapper">
       <header>
         <h1>Move-blob</h1>
         <p>Move a blob around with arrow keys or on-screen buttons. Something I&#39;m using to practice testing a node-express-angular app.</p>
-
         <p class="view"><a href="https://github.com/sachinphatak/move-blob">View the Project on GitHub <small>sachinphatak/move-blob</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/sachinphatak/move-blob/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/sachinphatak/move-blob/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/sachinphatak/move-blob">View On <strong>GitHub</strong></a></li>
-        </ul>
       </header>
       <section>
-        <p>Move a blob around with arrow keys or on-screen buttons. Something I'm using to practice testing a node-express-angular app.</p>
+        <div ng-controller="BlobCtrl">
+          <img src="images/blob.jpg" ng-style="blobStyle">
+          <div id="controls" style="position:absolute; top:0%; right:0%">
+            <center>
+              <span>
+                <button ng-click="moveBlobUp()" style="position: relative"> ^ </button>
+              </span><br>
+            </center>
+            <span>
+              <button ng-click="moveBlobLeft()" style="position: relative"> < </button>
+              &nbsp;
+              <button ng-click="moveBlobRight()" style="position: relative"> > </button>
+            </span><br>
+            <center>
+              <span>
+                <button ng-click="moveBlobDown()" style="position: relative"> v </button>
+              </span><br>
+            </center>
+          </div>
+        </div>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/sachinphatak">sachinphatak</a></p>

@@ -5,13 +5,13 @@ BlobApp.config(['hotkeysProvider', function(hotkeysProvider){
 }]);
 
 BlobApp.controller('BlobCtrl', ['$scope', 'hotkeys', function($scope, hotkeys){
-
-	$scope.leftMarginPercentage = 10;
-	$scope.topMarginPercentage = 10;
+	console.log('this is working');
+	$scope.leftMarginPercentage = 50;
+	$scope.topMarginPercentage = 30;
 
 	$scope.refreshBlobPosition = function(){
 		$scope.blobStyle = {
-			'width': '20%',
+			'width': '15%',
 			'height': '20%',
 			'position': 'absolute',
 			'left': $scope.leftMarginPercentage + '%',
