@@ -1,6 +1,8 @@
 # move-blob
 Move a blob around with arrow keys or on-screen buttons. Something I'm using to practice testing a node-express-angular app.
 
+Live demo: http://sachinphatak.github.io/move-blob/
+
 ## Quickstart
 
 1. Clone the repo.
